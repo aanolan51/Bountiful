@@ -11,18 +11,36 @@ Item.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     item_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     item_description: {
         type: DataTypes.STRING,
+      },
+    item_quantity: {
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
-    userid: {
+    item_price: {
+        type: DataTypes.DECIMAL,
+        allowNull: false,
+      },
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
+        key: 'id',
+      },
+    },
+    catergory_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'catergory',
         key: 'id',
       },
     },
