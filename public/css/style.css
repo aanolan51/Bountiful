@@ -1,0 +1,21 @@
+/* **HOMEPAGE** */
+.hero-image {
+    background-image: url(../images/different-vegetables-textile-bag-grey.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-inner {
+    background: transparent;
+}
+
+.nav-color .nav-link {
+    color: whitesmoke;
+    font-size: 1.75rem;
+}
+
+.navbar-brand {
+    color: teal;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
