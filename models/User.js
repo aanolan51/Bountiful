@@ -30,7 +30,7 @@ User.init(
       allowNull: false,
     },
     location: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     email: {
