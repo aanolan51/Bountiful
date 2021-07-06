@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class User extends Model {
+  //pass in a user password and compare it to the hashed password:
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
@@ -16,15 +17,19 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    firstname: {
+    first_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    lastname: {
-      type:DataTypes.STRING,
-      allowNull: false
+    last_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    location: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -36,20 +41,15 @@ User.init(
         isEmail: true,
       },
     },
-    location: {
-      type: DataTypes.ENUM('north', 'south', 'east', 'west', 'central'),
-      defaultValue: 'normal'
-    },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6],
+        len: [8],
       },
     },
   },
-  
-  {
+  {//Hashing data and returning to db for security
     hooks: {
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
