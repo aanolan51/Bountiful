@@ -20,4 +20,4 @@ Item.belongsTo(Catergory, {
 });
 
 
-module.exports = { User, Item };
+module.exports = { User, Item, Catergory };
