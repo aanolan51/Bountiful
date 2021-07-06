@@ -1,4 +1,14 @@
+/* **ALL** */
+
+main {
+    font-family: 'Maven Pro', sans-serif;
+}
+
 /* **HOMEPAGE** */
+
+header {
+    font-family: 'Encode Sans SC', sans-serif;
+}
 
 .navbar-inner {
     background: transparent;
@@ -37,3 +47,25 @@ a:hover, .navbar-brand:hover {
     width: 100%;
     height: 200px;
 }
+
+/* ** DASHBOARD - MY BOUNTY - SELLER VIEW ** */
+
+/* ** PROFILE - BUYER VIEW OF DASHBOARD */
+
+/* ** LOGIN/SIGNUP ** */
+
+/* ** BROWSE ** */
+.group-card-elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-pic {
+    align-self: center;
+}
+
+.card-title {
+    font-weight: 800;
+}
+
+/* ** CART ** */
