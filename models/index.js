@@ -8,7 +8,7 @@ User.hasMany(Item, {
   foreignKey: 'user_id',
 });
 Catergory.hasMany(Item, {
-  foreignKey: 'item_id',
+  foreignKey: 'catergory_id',
 });
 
 
@@ -16,7 +16,7 @@ Item.belongsTo(User, {
   foreignKey: 'user_id',
 });
 Item.belongsTo(Catergory, {
-  foreignKey: 'item_id',
+  foreignKey: 'catergory_id',
 });
 
 

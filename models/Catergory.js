@@ -15,14 +15,7 @@ Catergory.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    item_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'item',
-        key: 'id',
-      },
     },
-  },
   {
     sequelize,
     freezeTableName: true,

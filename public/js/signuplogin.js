@@ -14,6 +14,8 @@ const signupFormHandler = async (event) => {
         body: JSON.stringify({ first_name, last_name, username, location, email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
+
+      console.log(response);
   
       if (response.ok) {
           //If all fields okay, take user to the dashboard page:
