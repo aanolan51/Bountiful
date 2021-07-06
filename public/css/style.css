@@ -37,7 +37,7 @@ a:hover, .navbar-brand:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(/images/different-vegetables-textile-bag-grey.jpg);
+    background-image: url("/images/different-vegetables-textile-bag-grey.jpg");
     background-size: cover;
 }
 
