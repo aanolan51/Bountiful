@@ -4,7 +4,7 @@ const { Item, User, Catergory } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //Include an edit button for one post. When button clicked, bring to edit page. Find the one post by id in order to display content in the form:
-  //Use path /api/posts/editpost/:id:
+  //Use path /api/items/edititem/:id:
   router.get('/edititem/:id', async (req, res) => {
     try {
       const itemData = await Item.findByPk(req.params.id, {
@@ -30,7 +30,7 @@ const withAuth = require('../../utils/auth');
   });
 
 
-  //Get request to make a new post and render new post page:
+  //Get request to make a new item and render new item page:
 router.get('/createitem', (req, res) => {
     if (req.session.logged_in) {
       //if already logged in, go to the new post for the user:
@@ -38,7 +38,7 @@ router.get('/createitem', (req, res) => {
     }
 });
 
-// Create a new post at path /api/items/createItem:
+// Create a new item at path /api/items/createItem:
 router.post('/createItem', withAuth, async (req, res) => {
   // console.log("IN POST FUNCTION")
   // console.log(req.body);
@@ -56,9 +56,9 @@ router.post('/createItem', withAuth, async (req, res) => {
     }
 });
 
-//Update a post at the path /api/posts/editpost/:id:
+//Update an item at the path /api/items/edititem/:id:
 router.put('/edititem/:id', withAuth, async (req, res) => {
-    // update a post by its `id` value
+    // update an item by its `id` value
     try {
       const updateItem= await Item.update(
         {title: req.body.title,
@@ -74,11 +74,11 @@ router.put('/edititem/:id', withAuth, async (req, res) => {
     }
 });
 
-//Delete a post
+//Delete an item at path api/items/:id:
 router.delete('/:id', withAuth, async (req, res) => {
     try {
       const itemData = await Item.destroy({
-          //destory the specific post id where the user is the current logged in user:
+          //destory the specific item id where the user is the current logged in user:
         where: {
           id: req.params.id,
           user_id: req.session.user_id,
