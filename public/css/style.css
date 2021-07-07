@@ -41,11 +41,31 @@ a:hover, .navbar-brand:hover {
     background-size: cover;
 }
 
+.no-hero-image {
+    width: auto;
+    height: auto;
+}
+
 .content {
     position: absolute;
     top: 100%;
     width: 100%;
     height: 200px;
+}
+
+/* CARD STYLING FOR ITEM POSTS - USED IN DASHBOARD, SELLER PROFILE AND BROWSE ITEMS */
+
+.group-card-elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-pic {
+    align-self: center;
+}
+
+.card-title {
+    font-weight: 800;
 }
 
 /* ** DASHBOARD - MY BOUNTY - SELLER VIEW ** */
