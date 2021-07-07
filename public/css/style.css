@@ -53,9 +53,48 @@ a:hover, .navbar-brand:hover {
     height: 200px;
 }
 
+.homepage-content section {
+    height: 35rem;
+    text-align: center;
+}
+
+.homepage-title {
+    padding: 3%;
+    padding-bottom: 4%;
+}
+
+.homepage-content-div-1 {
+    display: flex;
+    /* width: 100%;
+    height: 100%; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+#farmer-market {
+    width: 23rem;
+    height: 18rem;
+}
+
+.homepage-content-div-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.hp-pics-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.veg-pics {
+    width: 20rem;
+    height: 15rem; 
+}
+
 /* CARD STYLING FOR ITEM POSTS - USED IN DASHBOARD, SELLER PROFILE AND BROWSE ITEMS */
 
-.group-card-elements {
+/* .group-card-elements {
     display: flex;
     justify-content: space-between;
 }
@@ -66,7 +105,7 @@ a:hover, .navbar-brand:hover {
 
 .card-title {
     font-weight: 800;
-}
+} */
 
 /* ** DASHBOARD - MY BOUNTY - SELLER VIEW ** */
 
@@ -86,6 +125,10 @@ a:hover, .navbar-brand:hover {
 
 .card-title {
     font-weight: 800;
+}
+
+.homepage-pg {
+    margin: 2%;
 }
 
 /* ** CART ** */
