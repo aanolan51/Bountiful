@@ -18,7 +18,7 @@ const withAuth = require('../../utils/auth');
         ],
       });
   
-      const item = ItemData.get({ plain: true });
+      const item = itemData.get({ plain: true });
   
       res.render('editItem', {
         item,
