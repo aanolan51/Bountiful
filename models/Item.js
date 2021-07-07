@@ -37,10 +37,10 @@ Item.init(
         key: 'id',
       },
     },
-    catergory_id: {
+    category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'catergory',
+        model: 'category',
         key: 'id',
       },
     },

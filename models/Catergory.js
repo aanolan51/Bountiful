@@ -12,7 +12,8 @@ Catergory.init(
       autoIncrement: true,
     },
     catergory_name: {
-      type: DataTypes.STRING,
+      //Test using ENUM Datatype, a string object that limits the value chosen from a list of allowed values.
+      type: DataTypes.ENUM('fruits', 'vegetables', 'herbs', 'dairy'),
       allowNull: false,
     },
     },
