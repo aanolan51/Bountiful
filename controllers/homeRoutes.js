@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Item } = require('../models');
+const { User, Catergory, Item } = require('../models');
 const withAuth = require('../utils/auth');
 
 //Render initial homepage that does not requir user login:
