@@ -8,13 +8,16 @@ const newItemFunc = async (event) => {
     const item_unit = document.querySelector('#item-unit').value.trim();
     const item_price = document.querySelector('#item-price').value.trim();
     const cat_name = document.querySelector('#item-categories').value.trim();
+    const category_id = document.querySelector('.catOption').getAttribute('data-id');
+    
     
     
     if(title && item_name && item_description && item_quantity && item_unit && item_price && cat_name){
-        console.log("INSIDE FRONT END FETCH")
+        // console.log("INSIDE FRONT END FETCH")
+        
         const response = await fetch("/api/items/createItem", {
             method: 'POST',
-            body: JSON.stringify({title, item_name, item_description, item_quantity, item_unit, item_price, cat_name}),
+            body: JSON.stringify({title, item_name, item_description, item_quantity, item_unit, item_price, cat_name, category_id}),
             headers: {
               'Content-Type': 'application/json',
             },
