@@ -18,7 +18,7 @@
 
 <div id="id03" class="modal">
     <form
-    class="modal-content animate signup-form"
+    class="modal-content animate newItemForm"
     action="/action_page.php"
     method="post"
     >
@@ -88,16 +88,26 @@
                 <option value="dairy">Dairy</option>
                 <option value="dairy">Flowers</option>
             </select>
-</div>
+        </div>
 
 
-        <!-- REMEMBER ME BUTTON -->  
-        <!-- <button type="submit">Login</button>
-        <label>
-        <input type="checkbox" checked="checked" name="remember" /> Remember
-        me
-        </label>-->
+            <!-- REMEMBER ME BUTTON -->  
+            <!-- <button type="submit">Login</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+            </label>-->
+        </div>
+        <button
+            type="submit"
+            onclick="document.getElementById('id03').style.display='none'"
+            class="submitbtn">
+            Post Item
+        </button>
+        <!-- FORGOT PASSWORD LINK -->
+        <!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
     </div>
+    </form>
 
 <script>
 var modal3 = document.getElementById("id03");
