@@ -1,1 +1,15 @@
-
+<div class="dashboard-container">
+    <div class="profile">
+        <img src="woman-profile.PNG">
+        <div class="profile-info">
+            <h3>{{user.username}}</h3>
+            <h3>{{user.location}}</h3>    
+        </div>
+    </div>
+    <div class="items">
+        <h2>Bounty</h2>
+        {{#each items as |item|}}
+        {{>card}}
+        {{/each}}
+    </div>
+</div>
