@@ -24,7 +24,7 @@ const editProfile = async (event) => {
     const locationInput = document.createElement('input');
     locationInput.setAttribute("type","text")
     locationInput.setAttribute("class","profile-input")
-    locationInput.value = location;
+    locationInput.value = userLocation;
 
     const saveBtn = document.createElement('button');
     saveBtn.setAttribute("class","submit");

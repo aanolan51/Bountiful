@@ -168,18 +168,34 @@ a:hover, .navbar-brand:hover {
     margin: 3%;
 }
 
-.items {
+.dashboard-header {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    display: flex;
     width: 100%;
+    flex-wrap: wrap;
     align-items: center;
     /* padding-top: 5%; */
 }
 
 .item-card {
-    width: 65%;
-    margin: 5%;
-    padding: 3%;
+    width: 50%;
+    margin: 1%;
+}
+
+.item-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-btn {
+    padding: auto;
+    margin: 1%;
 }
 
 /* ** LOGIN/SIGNUP ** */
