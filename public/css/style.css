@@ -126,13 +126,26 @@ a:hover, .navbar-brand:hover {
     font-weight: 800;
 } */
 
-/* ** DASHBOARD - MY BOUNTY - SELLER VIEW ** */
-
-#profile-img {
-    width: 15%;
+/* ** DASHBOARD ONLY - MY BOUNTY - SELLER VIEW ** */
+.profile-info button {
+    margin-top: 10%;
+    background-color: var(--blue);
+    color: var(--gray);
+    width: 70%;
 }
 
-/* ** PROFILE - BUYER VIEW OF DASHBOARD */
+.hide {
+    display: none;
+}
+
+/* ** DASHBOARD & PROFILE (BUYER VIEW OF DASHBOARD) */
+
+#profile-img {
+    width: 50%;
+    padding-top: 10%;
+
+}
+
 .dashboard-container {
     display: flex;
 }
@@ -140,20 +153,27 @@ a:hover, .navbar-brand:hover {
 .profile {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: left;
-
 }
 
 .profile-info {
     padding-left: 15%;
+    margin: 3%;
 }
 
 .items {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     align-items: center;
-    padding: 5%;
+    padding-top: 5%;
+}
+
+.item-card {
+    width: 65%;
+    margin: 5%;
+    padding: 3%;
 }
 
 /* ** LOGIN/SIGNUP ** */
