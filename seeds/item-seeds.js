@@ -58,9 +58,9 @@ const itemData = [
     item_description: 'green chilli peppers',
     item_quantity: '45',
     item_price: '25',
-    user_id: '6',
+    user_id: '3',
     category_id: '2'
-},
+}
 
 ];
 
