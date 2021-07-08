@@ -27,6 +27,7 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.2.5",
     "pg": "^8.6.0",
+    "seed": "^0.4.4",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0"
   },
