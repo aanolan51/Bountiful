@@ -15,7 +15,7 @@ router.get('/', withAuth, async (req, res) => {
       //Getting multiple posts, so need to map the data:
       //Need to name it posts to match the partial in the handlebars:
       const items = userItemData.map((useritem) => useritem.get({ plain: true }));
-  
+      console.log(items)
       res.render('dashboard', {
         items,
         logged_in: true
