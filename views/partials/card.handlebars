@@ -6,14 +6,16 @@
         <div class="col-md-8">
         <div class="card-body">
             <div class="group-card-elements">
-                <h5 class="card-title">$5</h5>
-                <h5 class="card-title">Quantity: 15</h5>      
+                <h5 class="card-title">${{item_price}}</h5>
+                <h5 class="card-title">Quantity: {{item_quntity}}</h5>
+                <h5 class="card-title">{{category.category_name}}</h5>            
             </div>
-                <h4 class="card-title">Title</h4>
-            <p class="card-text">Description: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h4 class="item-title">{{title}}</h4>
+                <h5 class="item-name">{{item_name}}</h5>
+            <p class="card-text">{{item_description}}</p>
             <div class="group-card-elements">
-            <p class="card-text"><small class="text-muted">Location</small></p>
-            <p class="card-text"><small class="text-muted">Date posted</small></p>
+            <p class="card-text"><small class="text-muted">{{user.location}}</small></p>
+            <p class="card-text"><small class="text-muted">{{created_at}}</small></p>
             </div>
         </div>
         </div>

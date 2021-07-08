@@ -53,6 +53,18 @@ a:hover, .navbar-brand:hover {
     height: 200px;
 }
 
+.homepage-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hp-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4%;
+}
+
 .homepage-content section {
     height: 35rem;
     text-align: center;
@@ -110,6 +122,28 @@ a:hover, .navbar-brand:hover {
 /* ** DASHBOARD - MY BOUNTY - SELLER VIEW ** */
 
 /* ** PROFILE - BUYER VIEW OF DASHBOARD */
+.dashboard-container {
+    display: flex;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.profile-info {
+    padding-left: 15%;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    padding: 5%;
+}
 
 /* ** LOGIN/SIGNUP ** */
 
