@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Catergory extends Model {}
+class Category extends Model {}
 
-Catergory.init(
+Category.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,9 +11,9 @@ Catergory.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    catergory_name: {
+    category_name: {
       //Test using ENUM Datatype, a string object that limits the value chosen from a list of allowed values.
-      type: DataTypes.ENUM('fruits', 'vegetables', 'herbs', 'dairy'),
+      type: DataTypes.ENUM('fruits', 'vegetables', 'herbs', 'dairy', 'flowers'),
       allowNull: false,
     },
     },
@@ -21,8 +21,8 @@ Catergory.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'catergory',
+    modelName: 'category',
   }
 );
 
-module.exports = Catergory;
+module.exports = Category;

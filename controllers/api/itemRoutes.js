@@ -1,6 +1,6 @@
 // Pull in all requirements
 const router = require('express').Router();
-const { Item, User, Catergory } = require('../../models');
+const { Item, User, Category } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //Include an edit button for one post. When button clicked, bring to edit page. Find the one post by id in order to display content in the form:
@@ -13,7 +13,7 @@ const withAuth = require('../../utils/auth');
             model: User,
           },
           {
-            model: Catergory,
+            model: Category,
           },
         ],
       });
