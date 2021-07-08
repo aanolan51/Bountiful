@@ -1,22 +1,22 @@
 const User = require('./User');
 const Item = require('./Item');
-const Catergory = require('./Catergory');
+const Category = require('./Category');
 
 
-//Create all the associations between the user, the items, and the catergories:
+//Create all the associations between the user, the items, and the categories:
 User.hasMany(Item, {
   foreignKey: 'user_id',
 });
-Catergory.hasMany(Item, {
-  foreignKey: 'catergory_id',
+Category.hasMany(Item, {
+  foreignKey: 'category_id',
 });
 
 
 Item.belongsTo(User, {
   foreignKey: 'user_id',
 });
-Item.belongsTo(Catergory, {
-  foreignKey: 'catergory_id',
+Item.belongsTo(Category, {
+  foreignKey: 'category_id',
 });
 
 
