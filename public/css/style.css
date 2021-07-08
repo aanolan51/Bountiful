@@ -127,7 +127,7 @@ a:hover, .navbar-brand:hover {
 } */
 
 /* ** DASHBOARD ONLY - MY BOUNTY - SELLER VIEW ** */
-.profile-info button {
+.dashboard-container button {
     margin-top: 10%;
     background-color: var(--blue);
     color: var(--gray);
@@ -136,6 +136,12 @@ a:hover, .navbar-brand:hover {
 
 .hide {
     display: none;
+}
+
+#add-item {
+    justify-self: center;
+    width: 20%;
+    /* margin-right: 15%; */
 }
 
 /* ** DASHBOARD & PROFILE (BUYER VIEW OF DASHBOARD) */
@@ -167,7 +173,7 @@ a:hover, .navbar-brand:hover {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    padding-top: 5%;
+    /* padding-top: 5%; */
 }
 
 .item-card {

@@ -4,14 +4,108 @@
         <div class="profile-info">
             <h3 id="dashboard-username">{{items.0.user.username}}</h3>
             <h3 id="dashboard-location">{{items.0.user.location}}</h3>
-            <button id="edit-profile" type="button" class="btn">Edit Profile</button>           
+            <button id="edit-profile" type="button" class="btn"></button>Edit Profile</button>           
         </div>
     </div>
     <div class="items">
+        <button id="add-item" type="button" class="btn" onclick="document.getElementById('id03').style.display='block'" style="width: auto">Add Item</button>   
         <h2>Bounty</h2>
         {{#each items as |item|}}
         {{>card}}
         {{/each}}
     </div>
 </div>
+
+<div id="id03" class="modal">
+    <form
+    class="modal-content animate signup-form"
+    action="/action_page.php"
+    method="post"
+    >
+    <div class="imgcontainer">
+        <span
+        onclick="document.getElementById('id03').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >&times;</span
+        >
+        <img src="/images/bountiful.logo.drafts.png" alt="bountiful logo" class="avatar" />
+    </div>
+
+    <div class="container">
+        <label for="item-title"><b>Title</b></label>
+        <input
+        id="item-title"
+        type="text"
+        placeholder="Enter the title of your post"
+        name="title"
+        required
+        />
+
+        <label for="item-name"><b>Item Name</b></label>
+        <input
+        id="item-name"
+        type="text"
+        placeholder="Enter Item's Name"
+        name="itemName"
+        required
+        />
+
+        <label for="item-description"><b>Description</b></label>
+        <input
+        id="item-description"
+        type="text"
+        placeholder="Enter a description of the item"
+        name="description"
+        required
+        />
+
+        <label for="item-quantity"><b>Quantity</b></label>
+        <input
+        id="item-quantity"
+        type="text"
+        placeholder="Enter the quantity of the item"
+        name="quantity"
+        required
+        />
+
+        <label for="item-price"><b>Price</b></label>
+        <input
+        id="item-price"
+        type="text"
+        placeholder="Enter the price per unit of the item"
+        name="price"
+        required
+        />
+
+        <div>
+            <label for="item-categories"><b>Categories</b></label>
+            <select id="item-categories" name="category">
+                {{!-- {{#each items.0.category}} --}}
+                <option value="fruits">Fruits</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="herbs">Herbs</option>
+                <option value="dairy">Dairy</option>
+                <option value="dairy">Flowers</option>
+            </select>
+</div>
+
+
+        <!-- REMEMBER ME BUTTON -->  
+        <!-- <button type="submit">Login</button>
+        <label>
+        <input type="checkbox" checked="checked" name="remember" /> Remember
+        me
+        </label>-->
+    </div>
+
+<script>
+var modal3 = document.getElementById("id03");
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal3) {
+          modal2.style.display = "none";
+        }
+      };
+</script>
 <script src="/js/editprofile.js"></script>
