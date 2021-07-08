@@ -128,6 +128,10 @@ a:hover, .navbar-brand:hover {
 
 /* ** DASHBOARD - MY BOUNTY - SELLER VIEW ** */
 
+#profile-img {
+    width: 15%;
+}
+
 /* ** PROFILE - BUYER VIEW OF DASHBOARD */
 .dashboard-container {
     display: flex;
