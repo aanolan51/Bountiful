@@ -42,9 +42,10 @@ const userData = [
         first_name: "Blake",
         last_name: "Smith",
         username: "humanBean",
+        location: "East Sac",
         email: "the_blake@yahoo.com",
         password: "password12345"
-      },
+      }
 
 
 ];
