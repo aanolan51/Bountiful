@@ -41,6 +41,11 @@ a:hover, .navbar-brand:hover {
     background-size: cover;
 }
 
+.no-hero-image {
+    width: auto;
+    height: auto;
+}
+
 .content {
     position: absolute;
     top: 100%;
@@ -48,9 +53,97 @@ a:hover, .navbar-brand:hover {
     height: 200px;
 }
 
+.homepage-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hp-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4%;
+}
+
+.homepage-content section {
+    height: 35rem;
+    text-align: center;
+}
+
+.homepage-title {
+    padding: 3%;
+    padding-bottom: 4%;
+}
+
+.homepage-content-div-1 {
+    display: flex;
+    /* width: 100%;
+    height: 100%; */
+    align-items: center;
+    justify-content: space-around;
+}
+
+#farmer-market {
+    width: 23rem;
+    height: 18rem;
+}
+
+.homepage-content-div-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.hp-pics-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.veg-pics {
+    width: 20rem;
+    height: 15rem; 
+}
+
+/* CARD STYLING FOR ITEM POSTS - USED IN DASHBOARD, SELLER PROFILE AND BROWSE ITEMS */
+
+/* .group-card-elements {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-pic {
+    align-self: center;
+}
+
+.card-title {
+    font-weight: 800;
+} */
+
 /* ** DASHBOARD - MY BOUNTY - SELLER VIEW ** */
 
 /* ** PROFILE - BUYER VIEW OF DASHBOARD */
+.dashboard-container {
+    display: flex;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.profile-info {
+    padding-left: 15%;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    padding: 5%;
+}
 
 /* ** LOGIN/SIGNUP ** */
 
@@ -66,6 +159,10 @@ a:hover, .navbar-brand:hover {
 
 .card-title {
     font-weight: 800;
+}
+
+.homepage-pg {
+    margin: 2%;
 }
 
 /* ** CART ** */
