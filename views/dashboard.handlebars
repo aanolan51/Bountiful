@@ -7,12 +7,16 @@
             <button id="edit-profile" type="button" class="btn">Edit Profile</button>           
         </div>
     </div>
-    <div class="items">
-        <button id="add-item" type="button" class="btn" onclick="document.getElementById('id03').style.display='block'" style="width: auto">Add Item</button>   
-        <h2>Bounty</h2>
-        {{#each items as |item|}}
-        {{>card}}
-        {{/each}}
+    <div>
+        <div class="dashboard-header">
+            <button id="add-item" type="button" class="btn" onclick="document.getElementById('id03').style.display='block'" style="width: auto">Add Item</button>   
+            <h2>Your Bounty</h2>
+        </div>
+        <div class="items">
+            {{#each items as |item|}}
+                {{>card}}
+            {{/each}}
+        </div>
     </div>
 </div>
 
@@ -60,20 +64,29 @@
         required
         />
 
+        <label for="item-unit"><b>Item Unit</b></label>
+        <input
+        id="item-unit"
+        type="text"
+        placeholder="Enter the units of the item (ex: pounds, ounces, single units)"
+        name="unit"
+        required
+        />
+
         <label for="item-quantity"><b>Quantity</b></label>
         <input
         id="item-quantity"
         type="text"
-        placeholder="Enter the quantity of the item"
+        placeholder="Enter how many units are you selling"
         name="quantity"
         required
         />
 
-        <label for="item-price"><b>Price</b></label>
+        <label for="item-price"><b>Price per Unit</b></label>
         <input
         id="item-price"
         type="text"
-        placeholder="Enter the price per unit of the item"
+        placeholder="Enter the price per unit"
         name="price"
         required
         />
@@ -81,12 +94,11 @@
         <div>
             <label for="item-categories"><b>Categories</b></label>
             <select id="item-categories" name="category">
-                {{!-- {{#each items.0.category}} --}}
-                <option value="fruits">Fruits</option>
-                <option value="vegetables">Vegetables</option>
-                <option value="herbs">Herbs</option>
-                <option value="dairy">Dairy</option>
-                <option value="dairy">Flowers</option>
+                <option value="fruits" data-id=1>Fruits</option>
+                <option value="vegetables"data-id=2>Vegetables</option>
+                <option value="herbs" data-id=3>Herbs</option>
+                <option value="dairy" data-id=4>Dairy</option>
+                <option value="dairy" data-id=5>Flowers</option>
             </select>
         </div>
 
@@ -99,6 +111,7 @@
             </label>-->
         </div>
         <button
+            id="create-edit-btn"
             type="submit"
             onclick="document.getElementById('id03').style.display='none'"
             class="submitbtn">
@@ -114,9 +127,10 @@ var modal3 = document.getElementById("id03");
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function (event) {
         if (event.target == modal3) {
-          modal2.style.display = "none";
+          modal3.style.display = "none";
         }
       };
 </script>
 <script src="/js/editprofile.js"></script>
 <script src="/js/newItem.js"></script>
+<script src="/js/editItem.js"></script>

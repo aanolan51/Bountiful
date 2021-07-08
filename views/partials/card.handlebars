@@ -1,4 +1,4 @@
-<div class="card mb-3 item-card" style="max-width: 540px;">
+{{!-- <div class="card mb-3 item-card" style="max-width: 540px;">
     <div class="row g-0">
         <div class="col-md-4 card-pic">
         <img src="/images/tomato.jpg" class="img-fluid rounded-start" alt="...">
@@ -20,4 +20,17 @@
         </div>
         </div>
     </div>
+</div> --}}
+<div class="card item-card" style="width: 18rem;">
+    <li class="list-group-item">{{title}}</li>
+    <img src="images/tomato.jpg" class="card-img-top" alt="produce-pic">
+    <div class="card-body">
+        <h5 class="card-title">Quantity: ${{item_price}}/unit</h5>
+        <p class="card-text">{{item_description}}</p>
+        <div class="item-buttons">
+            <button id="edit-item" type="button" class="btn item-btn">Edit</button>   
+            <button id="delete-item" type="button" class="btn item-btn">Delete</button>       
+        </div>
+    </div>
 </div>
+
