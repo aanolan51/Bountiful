@@ -40,15 +40,15 @@ router.get('/createitem', (req, res) => {
 
 // Create a new item at path /api/items/createItem:
 router.post('/createItem', withAuth, async (req, res) => {
-  // console.log("IN POST FUNCTION")
-  // console.log(req.body);
-  // console.log(req.session.user_id);
+  console.log("IN POST FUNCTION")
+  console.log(req.body);
+  console.log(req.session.user_id);
     try {
-    //   console.log("INSIDE TRY FUNCTION")
-      const createdItem = await Item.create({
-        ...req.body,
-        //Need to stringify the user id in order to take it as an argument in the create:
-        user_id: JSON.stringify(req.session.user_id)}); 
+      console.log("INSIDE TRY FUNCTION")
+      // const createdItem = await Item.create({
+      //   ...req.body,
+      //   //Need to stringify the user id in order to take it as an argument in the create:
+      //   user_id: JSON.stringify(req.session.user_id)}); 
 
       res.status(200).json(createdItem);
     } catch (err) {
