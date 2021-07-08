@@ -1,4 +1,11 @@
 /* **ALL** */
+:root {
+    --blue: #50808e;
+    --forest: #2a4d14;
+    --gold: #f5bb00;
+    --gray: #e6e6e9;
+    --clay: #be5a38;
+  }
 
 main {
     font-family: 'Maven Pro', sans-serif;
