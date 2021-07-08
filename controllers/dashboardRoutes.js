@@ -5,6 +5,7 @@ const withAuth = require('../utils/auth');
 //Add in withAuth to include the authorization for logins. Only go to dashboard page when logged in. Show all items for the user:
 router.get('/', withAuth, async (req, res) => {
     try {
+      console.log(req.session.user_id);
       // Find the logged in user based on the session ID
       const userItemData = await Item.findAll({
         where: {user_id: req.session.user_id},

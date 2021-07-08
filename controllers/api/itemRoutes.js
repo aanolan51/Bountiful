@@ -48,7 +48,7 @@ router.post('/createItem', withAuth, async (req, res) => {
       const createdItem = await Item.create({
         ...req.body,
         //Need to stringify the user id in order to take it as an argument in the create:
-        user_id: JSON.stringify(req.session.user_id)});
+        user_id: JSON.stringify(req.session.user_id)}); 
 
       res.status(200).json(createdItem);
     } catch (err) {
