@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
   }
 });
 
-/* GET all items for homepage
+//GET all items for homepage
 router.get('/', async (req, res) => {
   try {
     const dbItemData = await Item.findAll({
@@ -26,6 +26,7 @@ router.get('/', async (req, res) => {
             'item_name', 
             'item_description',
             'item_quantity',
+            'item_unit',
             'item_price',
             'user_id',
             'category_id'
@@ -46,8 +47,38 @@ router.get('/', async (req, res) => {
     console.log(err);
     res.status(500).json(err);
   }
-});*/
+});
 
+//GET one item
+router.get('/:id', async (req, res) => {
+  try {
+    const dbItemData = await Item.findByPk(req.params.id, {
+      include: [
+        { model: Item,
+          attributes: [
+            'id', 
+            'title', 
+            'item_name', 
+            'item_description',
+            'item_quantity',
+            'item_unit',
+            'item_price',
+            'user_id',
+            'category_id'
+          ],
+        },
+      ],
+    });
+      if (!dbItemData) {
+        res.status(400).json({ message: "Error: no items exist with this id"});
+        return;
+      }
+      res.status(200).json(dbItemData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+    });
+  
 
 //Get user to the login route:
 router.get('/login', (req, res) => {
