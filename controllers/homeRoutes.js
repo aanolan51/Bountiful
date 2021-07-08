@@ -13,6 +13,41 @@ router.get('/', (req, res) => {
   }
 });
 
+/* GET all items for homepage
+router.get('/', async (req, res) => {
+  try {
+    const dbItemData = await Item.findAll({
+      include: [
+        {
+          model: Item,
+          attributes: [
+            'id', 
+            'title', 
+            'item_name', 
+            'item_description',
+            'item_quantity',
+            'item_price',
+            'user_id',
+            'category_id'
+          ],
+        },
+      ],
+    });
+
+    const items = dbItemData.map((item) =>
+      item.get({ plain: true })
+    );
+
+    res.render('homepage', {
+      items,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});*/
+
 
 //Get user to the login route:
 router.get('/login', (req, res) => {
