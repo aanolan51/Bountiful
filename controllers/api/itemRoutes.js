@@ -3,9 +3,9 @@ const router = require('express').Router();
 const { Item, User, Category } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//Include an edit button for one post. When button clicked, bring to edit page. Find the one post by id in order to display content in the form:
-  //Use path /api/items/edititem/:id:
-  router.get('/edititem/:id', async (req, res) => {
+// Find the one post by id in order to display content:
+  //Use path /api/items/:id:
+  router.get('/:id', async (req, res) => {
     try {
       const itemData = await Item.findByPk(req.params.id, {
         include: [
@@ -61,14 +61,17 @@ router.post('/createItem', withAuth, async (req, res) => {
 });
 
 //Update an item at the path /api/items/edititem/:id:
-router.put('/edititem/:id', withAuth, async (req, res) => {
+router.put('/edititem/:itemID', withAuth, async (req, res) => {
     // update an item by its `id` value
     try {
+      console.log(req.body);
+      console.log(req.params);
+      console.log(req.session.user_id);
       const updateItem= await Item.update(
         {...req.body,
           //Need to stringify the user id in order to take it as an argument in the create:
-          user_id: JSON.stringify(req.session.user_id),
-          where: {id: req.params.id, user_id: req.session.user_id,}}
+          user_id: JSON.stringify(req.session.user_id)},
+          {where: {id: req.params.itemID}}
       );
       res.status(200).json(updateItem);
     } catch (err) {
