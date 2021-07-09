@@ -1,28 +1,46 @@
 // const e = require("express");
-
+let itemID;
 
 const editItemFunc = async (event) => {
     event.preventDefault();
+    console.log("IN THE EDIT ITEM FUCNTION");
 
-    const title = document.querySelector('#itemTitle').value.trim();
-    const name = document.querySelector("#item-name").value.trim();
-    const description = document.querySelector("#item-description").value.trim();
-    const unit = document.querySelector("#item-unit").value.trim();
-    const quantity = document.querySelector("#item-quantity").value.trim();
-    const price = document.querySelector("#item-price").value.trim();
-    const category = document.querySelector("#item-categories").value.trim();
+    const title = document.querySelector('.item-title').textContent.trim();
+    console.log(title);
+    const item_name = document.querySelector(".item-name").textContent.trim();
+    const item_description = document.querySelector(".item-description").textContent.trim();
+    const item_unit = document.querySelector(".item-unit").textContent.trim();
+    const item_quantity = document.querySelector(".item-quantity").textContent.trim();
+    const item_price = document.querySelector(".item-price").textContent.trim();
+    const cat_name = document.querySelector(".item-categories").textContent.trim();
+    let category_id;
+    switch (cat_name)
+    {
+        case "fruits":
+            category_id = 1;
+            break;
+        case "vegetables":
+            category_id = 2;
+            break;
+        case "herbs":
+            category_id = 3;
+            break;
+        case "dairy":
+            category_id = 4;
+            break;
+        case "flowers":
+            category_id = 5;
+            break;
+    }   
 
       
     // console.log("EDIT EDIT ------------------------------------------------------------ ")
-    
   
-    if (event.target.hasAttribute('data-id')) {
-        const id = event.target.getAttribute('data-id');
-        // console.log(id);
+        console.log(itemID);
 
-      const response = await fetch(`/api/items/edititem/${id}`, {
+      const response = await fetch(`/api/items/edititem/${itemID}`, {
         method: 'PUT',
-        body: JSON.stringify({ title, name, description, unit, quantity, price, category }),
+        body: JSON.stringify({ title, item_name, item_description, item_quantity, item_unit, item_price, cat_name, category_id }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -33,15 +51,17 @@ const editItemFunc = async (event) => {
       } else {
         alert('Failed to edit item');
       }
-    }
   };
 
-  const FEeditProfile = (event) => {
+  const FEeditProfile = async (event) => {
     // event.preventDefault();
 
 
     if(event.target !== event.currentTarget) {
       //gets the information for the item from the card
+      console.log(event.currentTarget);
+      itemID = event.currentTarget.querySelector(".edit-item").id;
+      console.log(itemID);
       const itemTitle = event.currentTarget.querySelector(".title").textContent.trim();
       const itemName = event.currentTarget.querySelector(".item-name").textContent.trim();
       const itemDescpt = event.currentTarget.querySelector(".item-description").textContent.trim();
@@ -68,7 +88,7 @@ const editItemFunc = async (event) => {
       quntyInpt.value = itemQunty;
       priceInpt.value = itemPrice;
       catInpt.value = itemCat;
-      submitBtn.textContent = "Save Changes"
+      submitBtn.textContent = "Save Changes";
   
 
     }
@@ -82,19 +102,16 @@ const editItemFunc = async (event) => {
 const openModal = () => {
 
   //opens the modal with the edit button is clicked
-  clearForm();
+  // clearForm();
 
   const modal = document.getElementById("id03");
-  modal.setAttribute("style","display:block; width:auto")
+  modal.setAttribute("style","display:block; width:auto");
 
-  console.log("YOU ARE IN FUNCTION")
+  console.log("YOU ARE IN FUNCTION");
 
   const formSelector = document.querySelector('#create-edit-form');
-  formSelector.setAttribute("class","modal-content animate editItemForm")
-
+  formSelector.setAttribute("class","modal-content animate editItemForm");
   document.querySelector('.editItemForm').addEventListener('submit', editItemFunc);
-
-
 }
 
 // document.querySelector('.item-card').addEventListener('click', FEeditProfile);
@@ -103,8 +120,6 @@ const openModal = () => {
 [...document.querySelectorAll('.edit-item')].forEach(function(item) {
   item.addEventListener('click', openModal);
 })
-
-
 
 
 // document.querySelector('.editItemForm').addEventListener('submit', editItemFunc);
