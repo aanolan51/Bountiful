@@ -199,6 +199,28 @@ a:hover, .navbar-brand:hover {
 }
 
 /* ** BROWSE ** */
+.browse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    padding-top : 10%;
+}
+
+.browse-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    padding: 8%;
+}
+
+.browse-items .card {
+    margin: 2%;
+}
+
 .group-card-elements {
     display: flex;
     justify-content: space-between;
@@ -216,11 +238,11 @@ a:hover, .navbar-brand:hover {
     margin: 2%;
 }
 
-.browse-form {
+/* .browse-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 /* ** CART ** */
