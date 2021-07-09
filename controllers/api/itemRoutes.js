@@ -50,7 +50,7 @@ router.post('/createItem', withAuth, async (req, res) => {
         ...req.body,
         //Need to stringify the user id in order to take it as an argument in the create:
         user_id: JSON.stringify(req.session.user_id),
-        category_id: req.body.category_id}); 
+        }); 
 
       console.log(createdItem);
 
