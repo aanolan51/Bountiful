@@ -5,31 +5,31 @@ const editItemFunc = async (event) => {
     event.preventDefault();
     console.log("IN THE EDIT ITEM FUCNTION");
 
-    const title = document.querySelector('.item-title').textContent.trim();
+    const title = document.querySelector('#item-title').value.trim();
     console.log(title);
-    const item_name = document.querySelector(".item-name").textContent.trim();
-    const item_description = document.querySelector(".item-description").textContent.trim();
-    const item_unit = document.querySelector(".item-unit").textContent.trim();
-    const item_quantity = document.querySelector(".item-quantity").textContent.trim();
-    const item_price = document.querySelector(".item-price").textContent.trim();
-    const cat_name = document.querySelector(".item-categories").textContent.trim();
+    const item_name = document.querySelector("#item-name").value.trim();
+    const item_description = document.querySelector("#item-description").value.trim();
+    const item_unit = document.querySelector("#item-unit").value.trim();
+    const item_quantity = document.querySelector("#item-quantity").value.trim();
+    const item_price = document.querySelector("#item-price").value.trim();
+    const cat_name = document.querySelector("#item-categories").value.trim();
     let category_id;
     switch (cat_name)
     {
         case "fruits":
-            category_id = 1;
+            category_id = "1";
             break;
         case "vegetables":
-            category_id = 2;
+            category_id = "2";
             break;
         case "herbs":
-            category_id = 3;
+            category_id = "3";
             break;
         case "dairy":
-            category_id = 4;
+            category_id = "4";
             break;
         case "flowers":
-            category_id = 5;
+            category_id = "5";
             break;
     }   
 
@@ -121,5 +121,3 @@ const openModal = () => {
   item.addEventListener('click', openModal);
 })
 
-
-// document.querySelector('.editItemForm').addEventListener('submit', editItemFunc);
