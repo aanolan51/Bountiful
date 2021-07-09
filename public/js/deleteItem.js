@@ -20,15 +20,9 @@ const deleteButtonFunc = async (event) => {
       }
 };
 
-
-//Add event listner to the parent element containing all buttons:
-// let itemButton= document.querySelectorAll(".deleteMe");
-
-// parentItemContainer.addEventListener('click', deleteButtonFunc);
-
-
+//Put the event listener on the class of the parent items that contains all the cards to be rendered:
     document
-    .querySelector(`#${id}`)
+    .querySelector(".items")
     .addEventListener('click', deleteButtonFunc);
 
 
@@ -85,24 +79,3 @@ const deleteButtonFunc = async (event) => {
 //   }
 //   });
 // });
-
-  
-var deletePost = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-
-
-      const id = event.target.getAttribute('data-id');
-      const response = await fetch(`/api/posts/${id}`, {
-          method: 'DELETE',
-      })
-
-      if (response.ok) {
-          document.location.replace(`/dashboard`)
-      } else {
-          alert('Failed to delete item')
-      }
-  }
-}
-
-
-document.querySelector('.user-posts').addEventListener('click', deletePost)

@@ -65,12 +65,10 @@ router.put('/edititem/:id', withAuth, async (req, res) => {
     // update an item by its `id` value
     try {
       const updateItem= await Item.update(
-        {title: req.body.title,
-        item_name: req.body.item_name,
-        item_quantity: req.body.item_quantity,
-        item_price: req.body.item_price
-        },
-        {where: {id: req.params.id, user_id: req.session.user_id,}}
+        {...req.body,
+          //Need to stringify the user id in order to take it as an argument in the create:
+          user_id: JSON.stringify(req.session.user_id),
+          where: {id: req.params.id, user_id: req.session.user_id,}}
       );
       res.status(200).json(updateItem);
     } catch (err) {
