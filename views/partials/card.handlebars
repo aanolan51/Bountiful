@@ -1,4 +1,4 @@
-{{!-- <div class="card mb-3 item-card" style="max-width: 540px;">
+<div class="card mb-3 item-card" style="max-width: 540px;">
     <div class="row g-0">
         <div class="col-md-4 card-pic">
         <img src="/images/tomato.jpg" class="img-fluid rounded-start" alt="...">
@@ -6,31 +6,36 @@
         <div class="col-md-8">
         <div class="card-body">
             <div class="group-card-elements">
-                <h5 class="card-title">$ {{item_price}}</h5>
-                <h5 class="card-title">Quantity: {{item_quantity}}</h5>
-                <h5 class="card-title">{{category.category_name}}</h5>            
+                <h5 class="card-title item-price">$ {{item_price}}</h5>
+                <h5 class="card-title">Quantity: $<span class="item-quantity">{{item_quantity}}</span>/<span class="item-unit">{{item_unit}}</span></h5>
+                <h5 class="card-title item-categories">{{category.category_name}}</h5>            
             </div>
-                <h4 class="item-title">{{title}}</h4>
+                <h4 class="item-title title">{{title}}</h4>
                 <h5 class="item-name">{{item_name}}</h5>
-            <p class="card-text">{{item_description}}</p>
+            <p class="card-text item-description">{{item_description}}</p>
             <div class="group-card-elements">
             <p class="card-text"><small class="text-muted">{{user.location}}</small></p>
             <p class="card-text"><small class="text-muted">{{created_at}}</small></p>
             </div>
         </div>
         </div>
+        <div class="item-buttons">
+            <button type="button" class="btn item-btn edit-item" data-id={{id}}>Edit</button>   
+            <button type="button" class="btn item-btn delete-item" data-id={{id}}>Delete</button>       
+        </div>
+
     </div>
-</div> --}}
-<div class="card item-card" style="width: 18rem;">
-    <li class="list-group-item">{{title}}</li>
+</div>
+{{!-- <div class="card item-card" style="width: 18rem;">
+    <li class="list-group-item title">{{title}}</li>
     <img src="images/tomato.jpg" class="card-img-top" alt="produce-pic">
     <div class="card-body">
-        <h5 class="card-title">Quantity: ${{item_price}}/unit</h5>
+        <h5 class="card-title">Quantity: ${{item_price}}/{{item_unit}}</h5>
         <p class="card-text">{{item_description}}</p>
         <div class="item-buttons">
             <button id="edit-item" type="button" class="btn item-btn">Edit</button>   
-            <button id="delete-item" type="button" class="btn item-btn">Delete</button>       
+            <button id="delete-item" type="button" class="btn item-btn" data-id={{id}}>Delete</button>       
         </div>
     </div>
-</div>
+</div> --}}
 

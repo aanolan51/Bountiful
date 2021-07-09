@@ -184,7 +184,7 @@ a:hover, .navbar-brand:hover {
 }
 
 .item-card {
-    width: 50%;
+    width: 80%;
     margin: 1%;
 }
 
@@ -197,8 +197,6 @@ a:hover, .navbar-brand:hover {
     padding: auto;
     margin: 1%;
 }
-
-/* ** LOGIN/SIGNUP ** */
 
 /* ** BROWSE ** */
 .group-card-elements {
@@ -216,6 +214,13 @@ a:hover, .navbar-brand:hover {
 
 .homepage-pg {
     margin: 2%;
+}
+
+.browse-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ** CART ** */

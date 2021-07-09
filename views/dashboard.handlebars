@@ -9,7 +9,7 @@
     </div>
     <div>
         <div class="dashboard-header">
-            <button id="add-item" type="button" class="btn" onclick="document.getElementById('id03').style.display='block'" style="width: auto">Add Item</button>   
+            <button id="add-item" type="button" class="btn">Add Item</button>   
             <h2>Your Bounty</h2>
         </div>
         <div class="items">
@@ -22,6 +22,7 @@
 
 <div id="id03" class="modal">
     <form
+    id="create-edit-form"
     class="modal-content animate newItemForm"
     action="/action_page.php"
     method="post"
