@@ -26,10 +26,18 @@ Item.init(
         type: DataTypes.INTEGER,
         allowNull: false,
       },
+    item_unit:{
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     item_price: {
         type: DataTypes.DECIMAL,
         allowNull: false,
       },
+    cat_name:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
