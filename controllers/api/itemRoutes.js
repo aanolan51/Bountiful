@@ -30,8 +30,31 @@ const withAuth = require('../../utils/auth');
     }
   });
 
+//Find all items in a chosen category:
+router.get('/view/:category_id', withAuth, async (req, res) => {
+  // console.log("INSIDE CATEGORY FILTER BE FUNCTION")
+  try {
+    // console.log(req.params);
+    const catItemData = await Item.findAll({
+      where: {category_id: req.params.category_id},
+      include: [{ model: User, attributes: {exclude: ['password']},}, {model: Category}],
+    });
 
-// Find the one post by id in order to display content:
+    
+    const items = catItemData.map((catItem) => catItem.get({ plain: true }));
+    // console.log(items);
+
+    res.render('browse', {
+      items,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+// Find the one item by id in order to display content:
   //Use path /api/items/view/:id:
   router.get('/view/:id', async (req, res) => {
     try {
