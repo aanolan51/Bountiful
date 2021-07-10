@@ -199,6 +199,28 @@ a:hover, .navbar-brand:hover {
 }
 
 /* ** BROWSE ** */
+.browse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container {
+    padding-top : 10%;
+}
+
+.browse-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    padding: 8%;
+}
+
+.browse-items .card {
+    margin: 2%;
+}
+
 .group-card-elements {
     display: flex;
     justify-content: space-between;
@@ -216,11 +238,61 @@ a:hover, .navbar-brand:hover {
     margin: 2%;
 }
 
-.browse-form {
+/* .browse-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+/* ITEM VIEW */
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 8%;
+}
+
+.left-container {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+#item-view-img {
+    margin-top: 10%;
+    border: 5px solid black;
+}
+
+.seller-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    border: 5px solid black;
+}
+
+.seller-btn {
+    margin: 5%;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 5px solid black;
 }
 
 /* ** CART ** */
