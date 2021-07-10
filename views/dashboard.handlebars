@@ -12,10 +12,12 @@
             <button id="add-item" type="button" class="btn">Add Item</button>   
             <h2>Your Bounty</h2>
         </div>
-        <div class="items">
+
+        <div class="items h-100">
             {{#each items as |item|}}
                 {{>card}}
             {{/each}}
+</div>
         </div>
     </div>
 </div>

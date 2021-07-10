@@ -180,12 +180,12 @@ a:hover, .navbar-brand:hover {
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     /* padding-top: 5%; */
 }
 
 .item-card {
-    width: 80%;
-    margin: 1%;
+    width: 90%;
 }
 
 .item-buttons {
