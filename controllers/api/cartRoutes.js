@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { User, Category, Item } = require('../models');
-const withAuth = require('../utils/auth');
+const { User, Category, Item } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 //Get cart
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const userData = await User.findOne({
             where: {id: req.session.user_id}, 
