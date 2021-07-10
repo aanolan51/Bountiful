@@ -1,16 +1,17 @@
 <div class="browse-container">
     <div class="form-container">
-        <form classs="browse-form">
+        <form class="browse-form">
             <label for="item-categories"><b>Categories</b></label>
             <select id="item-categories" name="category">
-                <option value="fruits" data-id=1>Fruits</option>
-                <option value="vegetables"data-id=2>Vegetables</option>
-                <option value="herbs" data-id=3>Herbs</option>
-                <option value="dairy" data-id=4>Dairy</option>
-                <option value="dairy" data-id=5>Flowers</option>
+                <option value="fruits" data-id="1">Fruits</option>
+                <option value="vegetables"data-id="2">Vegetables</option>
+                <option value="herbs" data-id="3">Herbs</option>
+                <option value="dairy" data-id="4">Dairy</option>
+                <option value="dairy" data-id="5">Flowers</option>
             </select>
             <button type="submit" class="btn">Filter</button>
         </form>
+{{!-- Add in an IF statement to render a heading for the category when a category is selected?? --}}
 
     </div>
     <div class="browse-items">
@@ -19,4 +20,6 @@
         {{/each}}
     </div>
 </div>
+
+<script src="/js/filterItem.js"></script>
 

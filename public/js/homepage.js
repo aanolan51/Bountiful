@@ -1,7 +1,7 @@
 const imgClassSelector = document.querySelector("#hero-image")
 
 const heroPicture = () => {
-    console.log(document.location.pathname)
+    // console.log(document.location.pathname)
     if(document.location.pathname === "/"){
         imgClassSelector.setAttribute("class","image")
     } else {
