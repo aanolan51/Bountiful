@@ -47,7 +47,6 @@ const userData = [
         password: "password12345"
       }
 
-
 ];
 
 const seedUsers = () => User.bulkCreate(userData, {individualHooks: true});

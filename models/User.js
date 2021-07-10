@@ -40,9 +40,6 @@ User.init(
       validate: {
         isEmail: true,
       },
-    cart: {
-        type: DataTypes.ARRAY,
-      },
     },
     password: {
       type: DataTypes.STRING,
