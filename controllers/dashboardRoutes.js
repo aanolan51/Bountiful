@@ -8,9 +8,8 @@ router.get('/', withAuth, async (req, res) => {
       console.log(req.session.user_id);
       // Find the logged in user based on the session ID
       const userItemData = await Item.findAll({
-        where: {user_id: req.session.user_id},
-        attributes: { exclude: ['password'] },
-        include: [{ model: User }, {model: Category}],
+        where: {user_id: req.session.user_id},        
+        include: [{ model: User, attributes: { exclude: ['password'] }, }, {model: Category}],
       });
   
       //Getting multiple posts, so need to map the data:

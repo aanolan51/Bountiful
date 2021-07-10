@@ -78,7 +78,33 @@ router.get('/', (req, res) => {
 //       res.status(500).json(err);
 //     }
 //     });
+
+// Find the one item by id in order to display content:
+  //Use path /view/:id:
+  router.get('/view/:id', async (req, res) => {
+    try {
+      const itemData = await Item.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            attributes: {exclude: ['password']},
+          },
+          {
+            model: Category,
+          },
+        ],
+      });
   
+      const item = itemData.get({ plain: true });
+  
+      res.render('itemview', {
+        ...item,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 //Get user to the login route:
 router.get('/login', (req, res) => {
