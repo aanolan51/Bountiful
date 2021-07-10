@@ -247,11 +247,30 @@ a:hover, .navbar-brand:hover {
 
 /* ITEM VIEW */
 
+/* #cart-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
 .page-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin: 8%;
+}
+
+#cart-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-cart {
+    background-color: var(--blue);
+    width: 15%;
 }
 
 .left-container {
