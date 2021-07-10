@@ -101,3 +101,9 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100
   document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
+
+const storeCartData = (event) => {
+  event.preventDefault();
+}
+
+document.querySelector('#cart-form').addEventListener('submit',storeCartData)
