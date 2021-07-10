@@ -37,23 +37,23 @@ const editProfile = async (event) => {
     locationInputSelect.appendChild(locationOption1);
 
     const locationOption2 = document.createElement('option');
-    locationOption2.setAttribute("value","downtown");
-    locationOption2.textContent = "Downtown Sacramento";
+    locationOption2.setAttribute("value","westSac");
+    locationOption2.textContent = "West Sacramento";
     locationInputSelect.appendChild(locationOption2);
     
     const locationOption3 = document.createElement('option');
-    locationOption3.setAttribute("value","downtown");
-    locationOption3.textContent = "Downtown Sacramento";
+    locationOption3.setAttribute("value","eastSac");
+    locationOption3.textContent = "East Sacramento";
     locationInputSelect.appendChild(locationOption3);
     
     const locationOption4 = document.createElement('option');
-    locationOption4.setAttribute("value","downtown");
-    locationOption4.textContent = "Downtown Sacramento";
+    locationOption4.setAttribute("value","northSac");
+    locationOption4.textContent = "North Sacramento";
     locationInputSelect.appendChild(locationOption4);
     
     const locationOption5 = document.createElement('option');
-    locationOption5.setAttribute("value","downtown");
-    locationOption5.textContent = "Downtown Sacramento";
+    locationOption5.setAttribute("value","southSac");
+    locationOption5.textContent = "South Sacramento";
     locationInputSelect.appendChild(locationOption5);
     
     // locationInput.setAttribute("type","text")
