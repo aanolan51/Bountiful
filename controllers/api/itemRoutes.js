@@ -3,6 +3,34 @@ const router = require('express').Router();
 const { Item, User, Category } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Find all items and display content:
+  //Use path /api/items:
+  router.get('/', async (req, res) => {
+    try {
+      const itemData = await Item.findAll({
+        include: [
+          {
+            model: User,
+            attributes: {exclude: ['password']},
+          },
+          {
+            model: Category,
+          },
+        ],
+      });
+  
+      const items = itemData.map((item) => item.get({ plain: true }));
+  
+      res.render('browse', {
+        items,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+
 // Find the one post by id in order to display content:
   //Use path /api/items/:id:
   router.get('/:id', async (req, res) => {
@@ -52,7 +80,7 @@ router.post('/createItem', withAuth, async (req, res) => {
         user_id: JSON.stringify(req.session.user_id),
         }); 
 
-      console.log(createdItem);
+      // console.log(createdItem);
 
       res.status(200).json(createdItem);
     } catch (err) {
@@ -64,9 +92,9 @@ router.post('/createItem', withAuth, async (req, res) => {
 router.put('/edititem/:itemID', withAuth, async (req, res) => {
     // update an item by its `id` value
     try {
-      console.log(req.body);
-      console.log(req.params);
-      console.log(req.session.user_id);
+      // console.log(req.body);
+      // console.log(req.params);
+      // console.log(req.session.user_id);
       const updateItem= await Item.update(
         {...req.body,
           //Need to stringify the user id in order to take it as an argument in the create:
