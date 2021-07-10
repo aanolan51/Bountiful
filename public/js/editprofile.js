@@ -21,10 +21,44 @@ const editProfile = async (event) => {
     userInput.setAttribute("class","profile-input")
     userInput.value = username;
 
-    const locationInput = document.createElement('input');
-    locationInput.setAttribute("type","text")
-    locationInput.setAttribute("class","profile-input")
-    locationInput.value = userLocation;
+    const locationInputDiv = document.createElement('div');
+    const locationInputLabel = document.createElement('label');
+    locationInputDiv.appendChild(locationInputLabel);
+    locationInputLabel.setAttribute("for","location-edit");
+    locationInputLabel.textContent = "Location";
+    const locationInputSelect = document.createElement('select');
+    locationInputSelect.setAttribute("id","location-edit");
+    locationInputSelect.setAttribute("name","location-edit");
+    locationInputLabel.appendChild(locationInputSelect);
+
+    const locationOption1 = document.createElement('option');
+    locationOption1.setAttribute("value","downtown");
+    locationOption1.textContent = "Downtown Sacramento";
+    locationInputSelect.appendChild(locationOption1);
+
+    const locationOption2 = document.createElement('option');
+    locationOption2.setAttribute("value","westSac");
+    locationOption2.textContent = "West Sacramento";
+    locationInputSelect.appendChild(locationOption2);
+    
+    const locationOption3 = document.createElement('option');
+    locationOption3.setAttribute("value","eastSac");
+    locationOption3.textContent = "East Sacramento";
+    locationInputSelect.appendChild(locationOption3);
+    
+    const locationOption4 = document.createElement('option');
+    locationOption4.setAttribute("value","northSac");
+    locationOption4.textContent = "North Sacramento";
+    locationInputSelect.appendChild(locationOption4);
+    
+    const locationOption5 = document.createElement('option');
+    locationOption5.setAttribute("value","southSac");
+    locationOption5.textContent = "South Sacramento";
+    locationInputSelect.appendChild(locationOption5);
+    
+    // locationInput.setAttribute("type","text")
+    // locationInput.setAttribute("class","profile-input")
+    // locationInput.value = userLocation;
 
     const saveBtn = document.createElement('button');
     saveBtn.setAttribute("class","submit");
@@ -32,7 +66,7 @@ const editProfile = async (event) => {
     saveBtn.textContent = "Save"
 
     profileForm.appendChild(userInput)
-    profileForm.appendChild(locationInput)
+    profileForm.appendChild(locationInputDiv)
     profileForm.appendChild(saveBtn);
     profileLi.appendChild(profileForm);
 
