@@ -32,13 +32,14 @@ const withAuth = require('../../utils/auth');
 
 
 // Find the one post by id in order to display content:
-  //Use path /api/items/:id:
-  router.get('/:id', async (req, res) => {
+  //Use path /api/items/view/:id:
+  router.get('/view/:id', async (req, res) => {
     try {
       const itemData = await Item.findByPk(req.params.id, {
         include: [
           {
             model: User,
+            attributes: {exclude: ['password']},
           },
           {
             model: Category,
@@ -48,8 +49,8 @@ const withAuth = require('../../utils/auth');
   
       const item = itemData.get({ plain: true });
   
-      res.render('editItem', {
-        item,
+      res.render('itemview', {
+        ...item,
         logged_in: req.session.logged_in
       });
     } catch (err) {
