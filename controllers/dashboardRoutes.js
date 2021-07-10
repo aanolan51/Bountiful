@@ -2,28 +2,6 @@ const router = require('express').Router();
 const { Item, Category, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-//Add in withAuth to include the authorization for logins. Only go to dashboard page when logged in. Show all items for the user:
-router.get('/', withAuth, async (req, res) => {
-    try {
-      console.log(req.session.user_id);
-      // Find the logged in user based on the session ID
-      const userItemData = await Item.findAll({
-        where: {user_id: req.session.user_id},        
-        include: [{ model: User, attributes: { exclude: ['password'] }, }, {model: Category}],
-      });
-  
-      //Getting multiple posts, so need to map the data:
-      //Need to name it posts to match the partial in the handlebars:
-      const items = userItemData.map((useritem) => useritem.get({ plain: true }));
-      console.log(items)
-      res.render('dashboard', {
-        items,
-        logged_in: true
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
 
 router.get('/sellerProfile/:id', withAuth, async (req, res) => {
     try {
@@ -31,8 +9,7 @@ router.get('/sellerProfile/:id', withAuth, async (req, res) => {
       const sellerItemData = await Item.findAll({
           //Console.log this to make sure the id matches the seller id:
         where: {id: req.params.id},
-        attributes: { exclude: ['password'] },
-        include: [{ model: User }, {model: Category}],
+        include: [{ model: User , attributes: { exclude: ['password'] },}, {model: Category}],
       });
   
       //Getting multiple posts, so need to map the data:
@@ -47,6 +24,44 @@ router.get('/sellerProfile/:id', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
 });
+
+
+//Get request to pull in item model and user model to use when rendering the dashboard:
+router.get('/', withAuth, async (req, res) => {
+  console.log("IN ITEM GET REQUEST");
+    try {
+      // Find all items associated with a logged in user:
+      const userItemData = await Item.findAll({
+        where: {user_id: req.session.user_id},        
+        include: [{ model: User , attributes: { exclude: ['password'] },},{model: Category}],
+      });
+
+      //Find the user that is logged in:
+      const userData = await User.findOne({
+        where: {id: req.session.user_id}, 
+        attributes: { exclude: ['password'] },
+      });
+
+      console.log(userData);
+  
+      //Getting multiple items, so need to map the data:
+      //Need to name it items to match the partial in the handlebars:
+      const items = userItemData.map((useritem) => useritem.get({ plain: true }));
+      const userInfo = userData.get({ plain: true });
+
+      // console.log(userInfo);
+      // console.log(items);
+
+      res.render('dashboard', {
+        items,
+        userInfo,
+        logged_in: true
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 
 
 
