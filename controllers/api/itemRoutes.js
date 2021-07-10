@@ -54,32 +54,32 @@ router.get('/view/:category_id', withAuth, async (req, res) => {
 });
 
 
-// Find the one item by id in order to display content:
-  //Use path /api/items/view/:id:
-  router.get('/view/:id', async (req, res) => {
-    try {
-      const itemData = await Item.findByPk(req.params.id, {
-        include: [
-          {
-            model: User,
-            attributes: {exclude: ['password']},
-          },
-          {
-            model: Category,
-          },
-        ],
-      });
+// // Find the one item by id in order to display content:
+//   //Use path /api/items/view/:id:
+//   router.get('/view/:id', async (req, res) => {
+//     try {
+//       const itemData = await Item.findByPk(req.params.id, {
+//         include: [
+//           {
+//             model: User,
+//             attributes: {exclude: ['password']},
+//           },
+//           {
+//             model: Category,
+//           },
+//         ],
+//       });
   
-      const item = itemData.get({ plain: true });
+//       const item = itemData.get({ plain: true });
   
-      res.render('itemview', {
-        ...item,
-        logged_in: req.session.logged_in
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+//       res.render('itemview', {
+//         ...item,
+//         logged_in: req.session.logged_in
+//       });
+//     } catch (err) {
+//       res.status(500).json(err);
+//     }
+//   });
 
 
   //Get request to make a new item and render new item page:
