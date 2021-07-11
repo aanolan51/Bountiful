@@ -9,13 +9,11 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="cart.css" />
-    <script src="cart.js" async></script>
-
-<body id="hero-image" class="cartBackgroundImage">
-
-    <div class="card">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> --}}
+    {{!-- <link rel="stylesheet" href="cart.css" />
+    <script src="cart.js" async></script> --}}
+<div id="cartBackgroundImage">
+    <div class="mainCartCard">
       <div class="row">
         <div class="col-md-8 cart">
           <div class="title">
@@ -97,14 +95,14 @@
                 <a onclick="removeCartItem(event)" class="close"> &#10005; </a>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="back-to-shop">
-            <a href="#">&leftarrow;</a
+            <a href="/api/items">&leftarrow;</a
             ><span class="text-muted">Back to Browse</span>
           </div>
         </div>
         <div class="col-md-4 summary">
-          <div> --}}
+          <div>
             <h5><b>Summary</b></h5>
           </div>
           <hr />
@@ -119,7 +117,7 @@
             <div class="col">TOTAL PRICE</div>
             <div id="cart-total" class="col text-right"></div>
           </div>
-          <button id="purchase" class="btn">PURCHASE</button>
+          <button id="purchase" class="btnCart">PURCHASE</button>
         </div>
       </div>
     </div>
