@@ -67,7 +67,7 @@ const openCreateModal = () => {
   }
 
 const clearForm = () => {
-    console.log("YOU ARE IN CLEAR FORM")
+    // console.log("YOU ARE IN CLEAR FORM")
     //selects the inputs in the modal for each feild
     const submitBtn = document.querySelector("#create-edit-btn");
     const titleInpt = document.querySelector("#item-title");

@@ -3,10 +3,10 @@ let itemID;
 
 const editItemFunc = async (event) => {
     event.preventDefault();
-    console.log("IN THE EDIT ITEM FUCNTION");
+    // console.log("IN THE EDIT ITEM FUCNTION");
 
     const title = document.querySelector('#item-title').value.trim();
-    console.log(title);
+    // console.log(title);
     const item_name = document.querySelector("#item-name").value.trim();
     const item_description = document.querySelector("#item-description").value.trim();
     const item_unit = document.querySelector("#item-unit").value.trim();
@@ -36,7 +36,7 @@ const editItemFunc = async (event) => {
       
     // console.log("EDIT EDIT ------------------------------------------------------------ ")
   
-        console.log(itemID);
+        // console.log(itemID);
 
       const response = await fetch(`/api/items/edititem/${itemID}`, {
         method: 'PUT',

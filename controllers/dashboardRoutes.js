@@ -28,7 +28,7 @@ router.get('/sellerProfile/:id', withAuth, async (req, res) => {
 
 //Get request to pull in item model and user model to use when rendering the dashboard:
 router.get('/', withAuth, async (req, res) => {
-  console.log("IN ITEM GET REQUEST");
+  // console.log("IN ITEM GET REQUEST");
     try {
       // Find all items associated with a logged in user:
       const userItemData = await Item.findAll({
@@ -42,7 +42,7 @@ router.get('/', withAuth, async (req, res) => {
         attributes: { exclude: ['password'] },
       });
 
-      console.log(userData);
+      // console.log(userData);
   
       //Getting multiple items, so need to map the data:
       //Need to name it items to match the partial in the handlebars:
