@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --blue: #50808e;
   --forest: #2a4d14;
   --gold: #f5bb00;
@@ -8,22 +8,22 @@
 
 main {
   font-family: "Maven Pro", sans-serif;
-}
+} */
 
-body {
+/* body {
   background: #ddd;
   min-height: 100vh;
   vertical-align: middle;
   display: flex;
   font-size: 0.8rem;
   font-weight: bold;
-}
+} */
 
 .title {
   margin-bottom: 5vh;
 }
 
-.card {
+.mainCartCard {
   margin: auto;
   max-width: 950px;
   width: 90%;
@@ -151,7 +151,7 @@ input:focus::-webkit-input-placeholder {
   margin-right: 10%;
 }
 
-.btn {
+.btnCart {
   background-color: var(--blue);
   border-color: var(--blue);
   color: white;
@@ -197,10 +197,11 @@ a:hover {
   background-position-y: center;
 }
 
-/* .cartBackgroundImage {
+/* EVERYTHING BELOW THIS WE CAN TRANSFER TO THE MAIN .css */
+#cartBackgroundImage {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background-image: url("public/images/farmers-market4.jpg"); */
+  background-image: url("/images/farmers-market4.jpg");
   background-size: cover;
-} */
+}

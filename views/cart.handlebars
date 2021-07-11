@@ -1,4 +1,4 @@
-    <link
+    {{!-- <link
       href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC&family=Maven+Pro&display=swap"
       rel="stylesheet"
     />
@@ -9,11 +9,11 @@
       crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="cart.css" />
-    <script src="cart.js" async></script>
-<body id="hero-image" class="cartBackgroundImage">
-    <div class="card">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> --}}
+    {{!-- <link rel="stylesheet" href="cart.css" />
+    <script src="cart.js" async></script> --}}
+<div id="cartBackgroundImage">
+    <div class="mainCartCard">
       <div class="row">
         <div class="col-md-8 cart">
           <div class="title">
@@ -22,13 +22,13 @@
                 <h4><b>The Bounty</b></h4>
               </div>
               <div class="col align-self-center text-right text-muted">
-                3 items
+                {{!-- 3 items --}}
                 <!-- INSERT ITEM TOTAL -->
               </div>
             </div>
           </div>
           <!-- FIRST ITEM ROW -->
-          <div class="row border-top border-bottom">
+          {{!-- <div class="row border-top border-bottom">
             <div class="row main align-items-center">
               <div class="col-2">
                 <img
@@ -92,9 +92,9 @@
                 <a onclick="removeCartItem(event)" class="close"> &#10005; </a>
               </div>
             </div>
-          </div>
+          </div> --}}
           <div class="back-to-shop">
-            <a href="#">&leftarrow;</a
+            <a href="/api/items">&leftarrow;</a
             ><span class="text-muted">Back to Browse</span>
           </div>
         </div>
@@ -104,7 +104,7 @@
           </div>
           <hr />
           <div class="row">
-            <div class="col" style="padding-left: 0">ITEMS 3</div>
+            {{!-- <div class="col" style="padding-left: 0">ITEMS 3</div> --}}
             <div class="col text-right">$ 132.00</div>
           </div>
           <div
@@ -114,8 +114,8 @@
             <div class="col">TOTAL PRICE</div>
             <div class="col text-right">$ 132.00</div>
           </div>
-          <button class="btn">PURCHASE</button>
+          <button class="btnCart">PURCHASE</button>
         </div>
       </div>
     </div>
-  </body>
+  </div>
