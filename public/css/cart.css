@@ -197,10 +197,10 @@ a:hover {
   background-position-y: center;
 }
 
-.cartBackgroudImage {
+/* .cartBackgroundImage {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url("/images/farmers-market2.jpg");
+  /* background-image: url("public/images/farmers-market4.jpg"); */
   background-size: cover;
-}
+} */
