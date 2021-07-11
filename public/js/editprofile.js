@@ -1,3 +1,5 @@
+//let userID;
+
 const editProfile = async (event) => {
     event.preventDefault();
 
@@ -6,8 +8,25 @@ const editProfile = async (event) => {
     const usernameLi = document.querySelector('#dashboard-username');
     const locationLi = document.querySelector('#dashboard-location')
 
-    let username = await usernameLi.textContent;
+    let username =  await usernameLi.textContent;
     let userLocation = await locationLi.textContent;
+
+//Angeli Test Code
+   const response = await fetch(`/api/user/:id`, {
+    method: 'PUT',
+    body: JSON.stringify({
+        username
+    }),
+    headers: {
+        'Content-Type': 'application/json'
+    },
+});
+if (response.ok) {
+    document.location.replace('/dashboard');
+} else {
+    alert("Failed to edit user");
+};
+//End Angeli Test Code
 
 
     editBtn.setAttribute("class","hide");

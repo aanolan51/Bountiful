@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth')
 
 //create new user
 router.post('/', async (req, res) => {
@@ -54,6 +55,43 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+//Angeli Test Code//
+//Edit user 
+router.put('/api/users/:id', withAuth, async (req, res) => {
+  try {
+    // console.log(req.body);
+    
+    const updateUser= await User.update(
+      {...req.body,
+        user_id: JSON.stringify(req.session.user_id)},
+        {where: {name: req.params.username}}
+    );
+    res.status(200).json(updateUser);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+}); 
+
+/*//Edit user #2
+router.put('/:id', (req, res) => {
+  User.update(req.body, {
+      individualHooks: true,
+      where: {
+          id: req.params.id,
+          name: req.params.username
+      }
+  })
+  .then(dbUserData => {
+      if (!dbUserData) {
+          res.status(400).json({ message: 'Cannot find this user' });
+          return;
+      }
+      res.json(dbUserData)
+  })
+  .catch(err => res.status(500).json(err));
+});*/
+
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
