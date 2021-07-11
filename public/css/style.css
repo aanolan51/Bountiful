@@ -11,6 +11,10 @@ main {
     font-family: 'Maven Pro', sans-serif;
 }
 
+.nav-color{
+    background-color: var(--blue);
+}
+
 /* **HOMEPAGE** */
 
 header {

@@ -1,5 +1,5 @@
 <div>
-    <form>
+    <form id="add-cart-form">
         <div id="cart-form">
         <div>
             <label for="cart-quantity"><b>Quantity</b></label>
@@ -30,16 +30,17 @@
     <div class="right-container">
         <div class="item-info">
             <h3>{{title}}</h3>
-            <h4>{{item_name}}</h4>
-            <h4>${{item_price}}/{{item_unit}}</h4>
-            <h4>Quantity available: {{item_quantity}}</h4>
-            <h4>Category: {{cat_name}}</h4>
-            <h4>Date posted: {{format_time createdAt}}    Updated at: {{format_time updatedAt}}</h4>
+            <h4 id="itemview-name">{{item_name}}</h4>
+            <h4>$<span id="itemview-price">{{item_price}}</span>/<span id="itemview-unit">{{item_unit}}</span></h4>
+            <h4>Quantity available: <span id="itemview-quantity">{{item_quantity}}</span></h4>
+            <h4>Category: <span id="itemview-catname">{{cat_name}}</span></h4>
+            <h4>Date posted: <span id="itemview-createdAt">{{format_time createdAt}}</span>    Updated at: <span id="itemview-updatedAt">{{format_time updatedAt}}</span></h4>
 
             <p>{{item_description}}</p>    
         </div>
         <img id="item-view-img" src="images/tomato.jpg" class="card-img-top" alt="...">
     </div>
-<script src="/js/shoppingcart.js"></script>
 </div>
+
+<script src="/js/addtocart.js"></script>
 
