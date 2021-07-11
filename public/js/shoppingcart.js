@@ -154,12 +154,13 @@ const renderCart = () => {
   
     const div7 = document.createElement('div');
     div7.setAttribute('class','col')
+    div7.textContent = cartItems[i].quantity;
     div2.appendChild(div7);
   
-    const div8 = document.createElement('div');
-    div8.setAttribute('class','row text-muted');
-    div8.textContent = cartItems[i].quantity;
-    div4.appendChild(div8);
+    // const div8 = document.createElement('div');
+    // div8.setAttribute('class','row text-muted');
+    // div8.textContent = cartItems[i].quantity;
+    // div4.appendChild(div8);
   
     const div9 = document.createElement('div');
     div9.setAttribute('class','col')

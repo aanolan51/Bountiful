@@ -8,7 +8,7 @@ const heroPicture = () => {
     //     imgClassSelector.setAttribute("class","image")
     // } else {
         imgClassSelector.setAttribute("class","no-hero-image")
-        headerSelector.setAttribute("class","nav-color")
+        // headerSelector.setAttribute("class","nav-color")
     }
 }
 
