@@ -63,7 +63,7 @@ router.get('/', withAuth, async (req, res) => {
   });
 
 //Get request to pull in item model and user model to use when rendering the seller:
-router.get('/', withAuth, async (req, res) => {
+router.get('/sellerprofile/', withAuth, async (req, res) => {
   // console.log("IN ITEM GET REQUEST");
     try {
       // Find all items associated with a logged in user:
