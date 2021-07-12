@@ -1,5 +1,5 @@
 const imgClassSelector = document.querySelector("#hero-image")
-const headerSelector = document.querySelector("#header")
+// const bodySelector = document.querySelector("#background")
 
 
 const heroPicture = () => {
@@ -8,6 +8,8 @@ const heroPicture = () => {
     //     imgClassSelector.setAttribute("class","image")
     // } else {
         imgClassSelector.setAttribute("class","no-hero-image")
+        // bodySelector.setAttribute("class","background")
+
         // headerSelector.setAttribute("class","nav-color")
     }
 }

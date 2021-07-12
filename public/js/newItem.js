@@ -55,7 +55,7 @@ const openCreateModal = () => {
     clearForm();
     
     const modal = document.getElementById("id03");
-    modal.setAttribute("style","display:block; width:auto")
+    modal.setAttribute("style","display:block;")
 
     const formSelector = document.querySelector('#create-edit-form');
     formSelector.setAttribute("class","modal-content animate newItemForm")

@@ -62,7 +62,7 @@ const editItemFunc = async (event) => {
       console.log(event.currentTarget);
       itemID = event.currentTarget.querySelector(".edit-item").id;
       console.log(itemID);
-      const itemTitle = event.currentTarget.querySelector(".title").textContent.trim();
+      const itemTitle = event.currentTarget.querySelector(".item-title").textContent.trim();
       const itemName = event.currentTarget.querySelector(".item-name").textContent.trim();
       const itemDescpt = event.currentTarget.querySelector(".item-description").textContent.trim();
       const itemUnit = event.currentTarget.querySelector(".item-unit").textContent.trim();
@@ -105,7 +105,7 @@ const openModal = () => {
   // clearForm();
 
   const modal = document.getElementById("id03");
-  modal.setAttribute("style","display:block; width:auto");
+  modal.setAttribute("style","display:block;");
 
   console.log("YOU ARE IN FUNCTION");
 
