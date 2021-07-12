@@ -15,6 +15,17 @@ main {
     background-color: var(--gray);
 }
 
+a {
+    text-decoration: none;
+}
+
+body {
+    /* background-color: #7da5b1; */
+    background-image: url("/images/wood-grain.jpg");
+    background-size: cover;
+
+}
+
 /* **HOMEPAGE** */
 
 header {
@@ -80,6 +91,10 @@ a:hover, .navbar-brand:hover {
     padding: 4%;
 }
 
+.section-2 {
+    padding-top: 0%;
+}
+
 .homepage-content section {
     height: 45rem;
     text-align: center;
@@ -140,46 +155,102 @@ a:hover, .navbar-brand:hover {
     font-weight: 800;
 } */
 
+
 /* ** DASHBOARD ONLY - MY BOUNTY - SELLER VIEW ** */
-.dashboard-container button {
-    margin-top: 10%;
-    background-color: var(--blue);
-    color: var(--gray);
-    width: 70%;
+.modal .b-logo {
+    width: 100px;
 }
 
 .hide {
     display: none;
 }
 
-#add-item {
+#add-item, #edit-profile, .save-btn {
     justify-self: center;
-    width: 20%;
-    /* margin-right: 15%; */
+    width: 15%;
+    margin-bottom: 5%;
+    margin-top: 6%;
+    background-color: var(--blue);
+    color: var(--gray);
 }
 
+#edit-profile, .save-btn {
+    width: 100%;
+    font-size: .85rem;
+}
+
+
 /* ** DASHBOARD & PROFILE (BUYER VIEW OF DASHBOARD) */
+.item-btn {
+    background-color: rgb(184, 182, 182);
+    color: black;
+    font-weight: 1000;
+    font-size: large;
+}
+
+.item-card {
+    margin: 5%;
+    padding: 3%;
+    /* background-color:#ddd; */
+}
+
+.item-title {
+    color: var(--clay)
+} 
+
+.center-btns {
+    margin-top: 1.5%;
+    text-align: center;
+}
+
+.item-btn {
+    width: 100px;
+    margin: 3%;
+}
+
+.group-card-elements {
+    display: flex;
+}
+
+
+
+/* .dashboard-container button {
+    margin-top: 10%;
+    background-color: var(--blue);
+    color: var(--gray);
+    width: 70%;
+} */
 
 #profile-img {
     width: 50%;
-    padding-top: 10%;
 
 }
 
 .dashboard-container {
     display: flex;
+    align-items: flex-start;
 }
 
 .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    width: 35%;
+    margin: 5%;
 }
 
 .profile-info {
-    padding-left: 15%;
-    margin: 3%;
+    margin-top: 3.5%;
+}
+
+.your-bounty {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
 }
 
 .dashboard-header {
@@ -187,6 +258,11 @@ a:hover, .navbar-brand:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.dashboard-header h2 {
+    margin-bottom: 3%;
 }
 
 .items {
@@ -197,9 +273,13 @@ a:hover, .navbar-brand:hover {
     justify-content: space-between;
     /* padding-top: 5%; */
 }
-
+/* 
 .item-card {
-    width: 90%;
+    margin: 2%;
+} */
+
+.dashboad-c-body {
+    width: 100%;
 }
 
 .item-buttons {
@@ -220,7 +300,7 @@ a:hover, .navbar-brand:hover {
 }
 
 .form-container {
-    padding-top : 10%;
+    width: 100%;
 }
 
 .browse-items {
@@ -228,7 +308,7 @@ a:hover, .navbar-brand:hover {
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
-    padding: 8%;
+    padding: 3%;
 }
 
 .browse-items .card {
@@ -252,11 +332,30 @@ a:hover, .navbar-brand:hover {
     margin: 2%;
 }
 
-/* .browse-form {
+.browse-form, #add-cart-form {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
+}
+
+.browse-form h5 {
+    width: 100%;
+}
+
+#browse-cat-btn, .add-cart {
+    background-color: var(--blue);
+    color: var(--gray);
+    width: 125px;
+}
+
+.browse-cat, .add-to-cart {
+    margin: 1.5%;
+}
+
+.browse-form select, #add-cart-form select {
+    /* margin-bottom: 0vh; */
+    width: initial;
+    border-radius: 5px;
 }
 
 /* ITEM VIEW */
@@ -275,7 +374,7 @@ a:hover, .navbar-brand:hover {
     margin: 8%;
 }
 
-#cart-form {
+/* #cart-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,7 +384,7 @@ a:hover, .navbar-brand:hover {
 .add-cart {
     background-color: var(--blue);
     width: 15%;
-}
+} */
 
 .left-container {
     width: 50%;
@@ -305,7 +404,17 @@ a:hover, .navbar-brand:hover {
 
 #item-view-img {
     margin-top: 10%;
-    border: 5px solid black;
+}
+
+.profile, .itemview-components, .card {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+  
 }
 
 .seller-info {
@@ -314,8 +423,8 @@ a:hover, .navbar-brand:hover {
     align-items: center;
     justify-content: center;
     width: 75%;
-    border: 5px solid black;
-}
+
+  }
 
 .seller-btn {
     margin: 5%;
@@ -325,7 +434,4 @@ a:hover, .navbar-brand:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 5px solid black;
 }
-
-/* ** CART ** */

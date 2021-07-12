@@ -3,23 +3,59 @@
         <img id="profile-img" src="/images/UserProfile-1.PNG">
         <div class="profile-info">
          
-            <h3 id="dashboard-username">{{userInfo.username}}</h3>
-            <h3 id="dashboard-location">{{userInfo.location}}</h3>
+            <h6 id="dashboard-username">{{userInfo.username}}</h6>
+            <h6 id="dashboard-location">{{userInfo.location}}</h6>
        
             <button id="edit-profile" type="button" class="btn" data-id="{{userInfo.id}}">Edit Profile</button>           
         </div>
     </div>
-    <div>
+    <div class = "your-bounty">
         <div class="dashboard-header">
             <button id="add-item" type="button" class="btn">Add Item</button>   
             <h2>Your Bounty</h2>
         </div>
 
-        <div class="items h-100">
-            {{#each items as |item|}}
+        <div class="items">
+            {{!-- {{#each items as |item|}}
                 {{>card}}
-            {{/each}}
-</div>
+            {{/each}} --}}
+                            <div class="card mb-3 item-card" style="max-width: 700px;">
+                    <div class="row g-0">
+                        <div class="col-md-4 card-pic">
+                            <div class="item-buttons">
+                            </div>
+                            <img src="/images/b-logo.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-title">
+                                <h2 class="item-title"><strong>Cherry Tomato's For Sale</strong> </h2>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-text">Item Name: Tomato</h5>
+                                <h5 class="card-text">Category: Vegetables</h5>
+    
+                                    <h5 class="card-text">Price: $ 5 / lb</h5>
+                                    <h5 class="card-text">Quantity: 10</h5>
+                                    <!-- <h5 class="card-body">$5/lb</h5>
+                                    <h5 class="card-body">Quantity: 10</h5> -->
+                                    
+                                    <h5 class="card-text">Description: Juicy tomatos ready to be eaten.</h5>
+                                    <p class="card-text"><small class="text-muted">Date created: 7/7/2021</small></p>
+                                    <div class="center-btns">
+                                        <button id="edit-item" type="button" class="btn item-btn">Edit</button>   
+                                        <button id="delete-item" type="button" class="btn item-btn">Delete</button>           
+                                    </div>
+                
+    
+                            </div>
+                            <!-- <div class="group-card-elements">
+                            <p class="card-text"><small class="text-muted">Downtown</small></p>
+                            <p class="card-text"><small class="text-muted">7/7/2021</small></p>
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
@@ -38,7 +74,7 @@
         title="Close Modal"
         >&times;</span
         >
-        <img src="/images/bountiful.logo.drafts.png" alt="bountiful logo" class="avatar" />
+        <img src="/images/b-logo.png" alt="bountiful logo" class="avatar b-logo" />
     </div>
 
     <div class="container">
