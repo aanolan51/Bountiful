@@ -167,31 +167,51 @@ a:hover, .navbar-brand:hover {
 
 #add-item, #edit-profile, .save-btn {
     justify-self: center;
-    width: 15%;
+    width: 100%;
+    font-size: .85rem;
     margin-bottom: 5%;
     margin-top: 6%;
     background-color: var(--blue);
     color: var(--gray);
 }
-
-#edit-profile, .save-btn {
+/* 
+#edit-profile, .save-btn, #add-item {
     width: 100%;
     font-size: .85rem;
-}
+} */
 
 
 /* ** DASHBOARD & PROFILE (BUYER VIEW OF DASHBOARD) */
+.card {
+    width: 55rem;
+    height: 22rem;
+}
+
+.card span {
+    width: 100%;
+}
+
+.item-title {
+    font-size: 1.5rem;
+}
+
+.card-body p {
+    line-height: 1;
+}
+
+.items-b-logo {
+    width: 100%;
+}
+
+.text-muted {
+    font-size: .75rem;
+}
+
 .item-btn {
     background-color: rgb(184, 182, 182);
     color: black;
     font-weight: 1000;
-    font-size: large;
-}
-
-.item-card {
-    margin: 5%;
-    padding: 3%;
-    /* background-color:#ddd; */
+    font-size: .75rem;
 }
 
 .item-title {
@@ -270,13 +290,12 @@ a:hover, .navbar-brand:hover {
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     /* padding-top: 5%; */
 }
-/* 
+
 .item-card {
     margin: 2%;
-} */
+}
 
 .dashboad-c-body {
     width: 100%;
