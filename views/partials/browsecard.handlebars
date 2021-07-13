@@ -1,10 +1,10 @@
 <a href="/view/{{id}}">
     <div class="card item-card" style="width: 18rem;">
-        <li class="list-group-item title">{{title}}</li>
-        <img src="/images/tomato.jpg" class="card-img-top" alt="produce-pic">
+        <li class="card-title list-group-item">{{title}}</li>
+        <img src="/images/b-logo.png" class="card-img-top browse-logo" alt="produce-pic">
         <div class="card-body">
-            <h5 class="card-title">Quantity: ${{item_price}}/{{item_unit}}</h5>
-            <p class="card-text">{{item_description}}</p>
+            <p class="card-text">${{item_price}}/{{item_unit}}</p>
+            <p class="card-text">Quantity: {{item_quantity}}</p>
         </div>
     </div>
 </a>

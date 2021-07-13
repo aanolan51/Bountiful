@@ -1,25 +1,28 @@
+<div id="itemvview-image">
 <div>
-    <form id="add-cart-form">
-        <div id="cart-form">
-        <div>
-            <label for="cart-quantity"><b>Quantity</b></label>
-            <select id="cart-quantity" name="locations" id="location-signup">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <button type="submit" class="btn add-cart">Add to Cart</button>
-        </div>
+    <div class="form-container">
+        <form id="add-cart-form">
+            {{!-- <div id="cart-form"> --}}
+            {{!-- <div> --}}
+                {{!-- <label for="cart-quantity"><h5 class="add-to-cart">Quantity</h5></label> --}}
+                <select id="cart-quantity" class="add-to-cart" name="locations">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            {{!-- </div> --}}
+            <button type="submit" class="btn add-to-cart add-cart">Add to Cart</button>
+            {{!-- </div> --}}
+        </form>
 
-    </form>
+    </div>
 
 </div>
 <div class="page-container">
     <div class="left-container">
-        <div class="seller-info">
+        <div class="seller-info itemview-components">
             <h3>Seller Information</h3>
             <img id="seller-img" src="/images/UserProfile-1.PNG">
             <p>{{user.username}}</p>
@@ -28,18 +31,20 @@
         </div>
     </div>
     <div class="right-container">
-        <div class="item-info">
-            <h3>{{title}}</h3>
-            <h4 id="itemview-name">{{item_name}}</h4>
-            <h4>$<span id="itemview-price">{{item_price}}</span>/<span id="itemview-unit">{{item_unit}}</span></h4>
-            <h4>Quantity available: <span id="itemview-quantity">{{item_quantity}}</span></h4>
-            <h4>Category: <span id="itemview-catname">{{cat_name}}</span></h4>
-            <h4>Date posted: <span id="itemview-createdAt">{{format_time createdAt}}</span>    Updated at: <span id="itemview-updatedAt">{{format_time updatedAt}}</span></h4>
-
+        <div class="item-info itemview-components">
+            <h3 style="color:var(--clay)">{{title}}</h3>
+            <p>Item Name: <span id="itemview-name">{{item_name}}</span></p>
+            <p>Price: $<span id="itemview-price">{{item_price}}</span>/<span id="itemview-unit">{{item_unit}}</span></p>
+            <p>Quantity available: <span id="itemview-quantity">{{item_quantity}}</span></p>
+            <p>Category: <span id="itemview-catname">{{cat_name}}</span></p>
+            <p>Date posted: <span id="itemview-createdAt">{{format_time createdAt}}</span></p>
+            <p>Updated at: <span id="itemview-updatedAt">{{format_time updatedAt}}</span></p>
             <p>{{item_description}}</p>    
         </div>
-        <img id="item-view-img" src="images/tomato.jpg" class="card-img-top" alt="...">
+        <img id="item-view-img" src="/images/tomato.jpg" class="card-img-top itemview-components" alt="...">
     </div>
+</div>
+
 </div>
 
 <script src="/js/addtocart.js"></script>

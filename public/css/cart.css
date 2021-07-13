@@ -24,7 +24,7 @@ main {
 }
 
 .mainCartCard {
-  margin: auto;
+  margin: 3%;
   max-width: 950px;
   width: 90%;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -101,7 +101,7 @@ a {
 
 .close {
   margin-left: auto;
-  font-size: 0.7rem;
+  /* font-size: 0.7rem; */
   text-decoration: none;
 }
 

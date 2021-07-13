@@ -1,30 +1,30 @@
-<div class="dashboard-container">
+<div id="dashboard-image" class="dashboard-container">
     <div class="profile">
         <img id="profile-img" src="/images/UserProfile-1.PNG">
         <div class="profile-info">
          
-            <h3 id="dashboard-username">{{userInfo.username}}</h3>
-            <h3 id="dashboard-location">{{userInfo.location}}</h3>
+            <h6 id="dashboard-username">{{userInfo.username}}</h6>
+            <h6 id="dashboard-location">{{userInfo.location}}</h6>
        
-            <button id="edit-profile" type="button" class="btn" data-id="{{userInfo.id}}">Edit Profile</button>           
+            <button id="edit-profile" type="button" class="btn" data-id="{{userInfo.id}}">Edit Profile</button>
+            <button id="add-item" type="button" class="btn">Add Item</button>   
+           
         </div>
     </div>
-    <div>
-        <div class="dashboard-header">
+    <div class = "your-bounty">
+        {{!-- <div class="dashboard-header">
             <button id="add-item" type="button" class="btn">Add Item</button>   
-            <h2>Your Bounty</h2>
-        </div>
+        </div> --}}
 
-        <div class="items h-100">
+        <div class="items">
             {{#each items as |item|}}
                 {{>card}}
             {{/each}}
-</div>
         </div>
     </div>
 </div>
 
-<div id="id03" class="modal">
+<div id="id03" class="modal" data-bs-backdrop="static" id="staticBackdrop">
     <form
     id="create-edit-form"
     class="modal-content animate newItemForm"
@@ -38,7 +38,7 @@
         title="Close Modal"
         >&times;</span
         >
-        <img src="/images/bountiful.logo.drafts.png" alt="bountiful logo" class="avatar" />
+        <img src="/images/b-logo.png" alt="bountiful logo" class="avatar b-logo" />
     </div>
 
     <div class="container">

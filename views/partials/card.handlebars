@@ -1,6 +1,4 @@
-<div class="col">
-<div id = "{{id}}" class="col-4 card mb-3 item-card" style="max-width: 540px; max-height: 600px;">
-    {{!-- <div class="row g-0"> --}}
+{{!-- <div id = "{{id}}" class="card item-card" style="width: 50%; height: 30rem;">
         <div class="col-md-4 card-pic">
         <img src="/images/tomato.jpg" class="img-fluid rounded-start" alt="...">
         </div>
@@ -26,10 +24,45 @@
             <button id = "{{id}}" type="button" class="btn item-btn edit-item">Edit</button>   
             <button type="button" class="btn item-btn delete-item" data-id="{{id}}">Delete</button>       
         </div>
+</div> --}}
+<div id = "{{id}}" class="card mb-3 item-card" style="max-width: 500px;">
+    <div class="row g-0">
+        <div class="col-md-4 card-pic">
+            <div class="item-buttons">
+            </div>
+            <img src="/images/b-logo.png" class="img-fluid rounded-start items-b-logo" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-title">
+                <h2 class="item-title""><strong>{{title}}</strong> </h2>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Item Name: <span class="item-name">{{item_name}}</span><p>
+                <p class="card-text">Category: <span class="item-categories">{{category.category_name}}</span></p>
 
-    {{!-- </div> --}}
+                    <p class="card-text">Price: $ <span class="item-price">{{item_price}}</span> / <span class="item-unit">{{item_unit}}</span></p>
+                    <p class="card-text">Quantity: <span class="item-quantity">{{item_quantity}}</span></p>
+                    <!-- <p class="card-body">$5/lb</h5>
+                    <h5 class="card-body">Quantity: 10</h5> -->
+                    
+                    <p class="card-text">Description: <span class="item-description">{{item_description}}</span></p>
+                    <p class="card-text"><small class="text-muted">Date created: {{format_time createdAt}}</small></p>
+                    <div class="center-btns">
+                        <button id = "{{id}}" type="button" class="btn item-btn edit-item">Edit</button>   
+                        <button type="button" class="btn item-btn delete-item" data-id="{{id}}">Delete</button>           
+                    </div>
+
+
+            </div>
+            <!-- <div class="group-card-elements">
+            <p class="card-text"><small class="text-muted">Downtown</small></p>
+            <p class="card-text"><small class="text-muted">7/7/2021</small></p>
+            </div> -->
+
+        </div>
+    </div>
 </div>
-</div>
+{{!-- </div> --}}
 {{!-- <div class="card item-card" style="width: 18rem;">
     <li class="list-group-item title">{{title}}</li>
     <img src="images/tomato.jpg" class="card-img-top" alt="produce-pic">
