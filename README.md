@@ -57,11 +57,12 @@ Pull requests will not be accepted without prior discussion, thank you.
   :octocat: https://github.com/leighdahlin1 <br>
   Feel free to drop me a line! <br> :fountain_pen: leigh.dahlin@gmail.com
 
-  Alyssa Nolan <br>
-  :octocat: https://github.com/aanolan51 <br>
-  Feel free to drop me a line! <br> :fountain_pen: nolana464@gmail.com
+  Alina Hernandez<br>
+  :octocat: https://github.com/truethatplaya <br>
+  Feel free to drop me a line! <br> :fountain_pen: alina.hernandez.ca@gmail.com
+  
 
-  Alyssa Nolan <br>
-  :octocat: https://github.com/aanolan51 <br>
-  Feel free to drop me a line! <br> :fountain_pen: nolana464@gmail.com
+  Angeli Mateo <br>
+  :octocat: https://github.com/helloam <br>
+  Feel free to drop me a line! <br> :fountain_pen: angeli.mateo@gmail.com
 
