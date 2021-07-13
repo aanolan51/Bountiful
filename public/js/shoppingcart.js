@@ -135,7 +135,7 @@ const renderCart = () => {
   
     const cartimg = document.createElement('img');
     cartimg.setAttribute('class','img-fluid');
-    cartimg.setAttribute('src','/images/tomato.jpg');
+    cartimg.setAttribute('src','/images/b-logo.png');
     div3.appendChild(cartimg);
   
     const div4 = document.createElement('div');
